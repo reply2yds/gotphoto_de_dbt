@@ -1,15 +1,15 @@
 {{ config(materialized='table') }}
-with stg_peoples as (
+with peoples as (
     select * from staging.stg_peoples
 ),
-stg_places as (
+places as (
     select * from staging.stg_places
 ),
 people_country as (
     select country,
     count(1) total_people
-    from stg_peoples
-    left join stg_places
+    from peoples
+    left join places
     on lower(place_of_birth) = lower(city)
     group by country
 )
