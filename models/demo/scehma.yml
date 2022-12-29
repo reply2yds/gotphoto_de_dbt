@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: people_per_country
+    description: This table has basic information about number of people per country
+
+    columns:
+      - name: country
+        description: This is a unique identifier for a customer
+        tests:
+          - unique
+          - not_null
+
+      - name: total_people
+        description: Total number of people per country
+        tests:
+          - not_null
