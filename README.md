@@ -5,12 +5,14 @@ This repository contains **DBT** code to transform. Firstly, the data is extract
 1. Make sure the `mysql` database is up and running
 2. Make sure the data is loaded into `analytics` schema of `mysql` database using airbyte
 3. `analytics` user have appropriate access to data
+4. Make sure `profile.yml` is appropriately setup
 
-### Using the starter project
+## Data transformation
+Data is transformed and loaded into various table using 3 different models. Use the below command to run the transformation:
+> `dbt run`
 
-Try running the following commands:
-- dbt run
-- dbt test
+The transformed data can be tested by running below command:
+> `dbt test`
 
 
 ### Resources:
