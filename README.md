@@ -1,4 +1,10 @@
-Welcome to your new dbt project!
+# GotPhoto Data Engineering Challenge - Part 2
+This repository contains **DBT** code to transform. Firstly, the data is extracted from the files placed in google drive to `analytics` schema of `mysql` database using **airbyte**.
+
+## Prerequisites
+1. Make sure the `mysql` database is up and running
+2. Make sure the data is loaded into `analytics` schema of `mysql` database using airbyte
+3. `analytics` user have appropriate access to data
 
 ### Using the starter project
 

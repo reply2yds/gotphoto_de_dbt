@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: peoples
+    description: This table has basic information about people
+
+    columns:
+      - name: people_id
+        description: This is a unique identifier for people
+        tests:
+          - unique
+          - not_null
+      - name: given_name
+        description: First name
+        tests:
+          - not_null
+      - name: family_name
+        description: Last name
+        tests:
+          - not_null
+      - name: date_of_birth
+        description: Date of birth
+        tests:
+          - not_null
+      - name: birth_place_id
+        description: FK to reference place of birth
+        tests:
+          - not_null
